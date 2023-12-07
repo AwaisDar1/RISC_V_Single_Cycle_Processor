@@ -23,10 +23,7 @@ module reg_file (
     begin
         if (rf_en)
         begin
-            if (rd != 5'b00000)
-            begin
             reg_mem[rd] <= wdata;
-            end
         end
     end
     

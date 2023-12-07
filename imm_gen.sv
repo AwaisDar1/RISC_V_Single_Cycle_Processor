@@ -15,8 +15,8 @@ module imm_gen
         i_imm = {{20{inst[31]}}, inst[31:20]};
         u_imm = {{12{inst[31]}}, inst[31:12]};
         u_imm = u_imm << 12;
-        j_imm = {{11{inst[31]}}, inst[31], inst[19:12], inst[20], inst[30:21], 1'b0};
-        b_imm = {{11{inst[31]}}, inst[31], inst[7], inst[30:25], inst[11:8], 1'b0};
+        j_imm = {{11{inst[31]}}, inst[31], inst[19:12], inst[20], inst[30:21], 1'b0};      // Unconditional Jump
+        b_imm = {{11{inst[31]}}, inst[31], inst[7], inst[30:25], inst[11:8], 1'b0};        // Conditional Jump
         s_imm = {{20{inst[31]}}, inst[31:25], inst[11:7]};
     end
 

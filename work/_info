@@ -1,0 +1,413 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/hp/Desktop/Processor
+T_opt
+!s110 1698011104
+Vkmd2aGaQ0_NoY_kkiJ_DK1
+Z2 04 12 4 work tb_processor fast 0
+=1-48ba4e45768d-653597e0-60-4f94
+Z3 !s124 OEM100
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 tCvgOpt 0
+n@_opt
+Z6 OL;O;2021.1;73
+R1
+T_opt1
+!s110 1698048917
+VlW@YbUEnSm4cJVA931[Td1
+R2
+=1-1062e56aa4b2-65362b95-3a-2660
+R3
+R4
+R5
+n@_opt1
+R6
+R1
+T_opt2
+!s110 1701937792
+Vkg3Y6a=FLFX2U]B`>iUQb0
+R2
+=1-48ba4e45768d-65718280-2f-7908
+R3
+R4
+R5
+n@_opt2
+R6
+R1
+valu
+Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z8 !s110 1701937961
+!i10b 1
+!s100 h<PMF=UBb5dQL08=`[d7d0
+IkOo09UD6iCRHW_2BkRDH^0
+S1
+Z9 dC:/Users/hp/Downloads/Processor (1)/Processor
+w1697989146
+8alu.sv
+Falu.sv
+!i122 148
+L0 1 41
+Z10 VDg1SIo80bB@j0V0VzS_@n1
+Z11 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z12 !s108 1701937960.000000
+!s107 tb_processor.sv|reg_file.sv|Processor.sv|PC.sv|interupt.sv|inst_mem.sv|inst_decode.sv|imm_gen.sv|data_mem.sv|csr_reg.sv|controller.sv|Branch_comp.sv|alu.sv|
+Z13 !s90 alu.sv|Branch_comp.sv|controller.sv|csr_reg.sv|data_mem.sv|imm_gen.sv|inst_decode.sv|inst_mem.sv|interupt.sv|PC.sv|Processor.sv|reg_file.sv|tb_processor.sv|
+!i113 0
+Z14 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+vBranch_comp
+R7
+R8
+!i10b 1
+!s100 JfWzTcRATUbT5XVR9O@>i1
+IAo:6<Y0IEA?8P?z=j_WMN2
+S1
+R9
+w1698048976
+8Branch_comp.sv
+FBranch_comp.sv
+!i122 148
+L0 1 28
+R10
+R11
+r1
+!s85 0
+31
+R12
+Z15 !s107 tb_processor.sv|reg_file.sv|Processor.sv|PC.sv|interupt.sv|inst_mem.sv|inst_decode.sv|imm_gen.sv|data_mem.sv|csr_reg.sv|controller.sv|Branch_comp.sv|alu.sv|
+R13
+!i113 0
+R14
+R5
+n@branch_comp
+vcontroller
+R7
+R8
+!i10b 1
+!s100 oTT37Do^<o5ELE4Q^XAB]0
+ImgTYYoNZJ;UAOe@jhnHlM0
+S1
+R9
+w1701932342
+8controller.sv
+Fcontroller.sv
+!i122 148
+L0 1 339
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R5
+vcsr_reg
+R7
+R8
+!i10b 1
+!s100 VZ]hHCZ^bKh43SMPKEieK3
+I@W9E:7S`XgDIQ0k@mZj;R0
+S1
+R9
+w1701937352
+8csr_reg.sv
+Fcsr_reg.sv
+!i122 148
+L0 1 48
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R5
+vdata_mem
+R7
+R8
+!i10b 1
+!s100 eSgf3=hD?UB@SSEaU91ZF3
+ITB0VAYOdkL]``Kmc7[_2<2
+S1
+R9
+w1698010914
+8data_mem.sv
+Fdata_mem.sv
+!i122 148
+L0 1 80
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R5
+vimm_gen
+R7
+R8
+!i10b 1
+!s100 =PTVR75BIZj3OABzCc[3F0
+I>KlPl3ofnU;i1mGX2hWW51
+S1
+R9
+w1698046508
+8imm_gen.sv
+Fimm_gen.sv
+!i122 148
+L0 1 34
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R5
+vinst_decode
+R7
+R8
+!i10b 1
+!s100 [EER[YSHE[HU[@:Pz_Q=91
+ID>]LOZg3TH^E_cNKHS>d`2
+S1
+R9
+w1696788380
+8inst_decode.sv
+Finst_decode.sv
+!i122 148
+L0 1 20
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R5
+vinst_mem
+R7
+R8
+!i10b 1
+!s100 bi<nhoV`AYWHAdSj181Ko1
+IUb;?>zW@?EA:MkiNI0k1W2
+S1
+R9
+w1696788716
+8inst_mem.sv
+Finst_mem.sv
+!i122 148
+L0 1 12
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R5
+vinterupt
+R7
+R8
+!i10b 1
+!s100 6XN4P@8e>_]M2THCzV]N=0
+I6NjF<<XWc5O@CS8inRDzn3
+S1
+R9
+w1701937480
+8interupt.sv
+Finterupt.sv
+!i122 148
+L0 1 49
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R5
+vPC
+R7
+R8
+!i10b 1
+!s100 Yi3V[WEabXGhYWSNm:_eT3
+I:DT=I=HeRk;:=2PXQ0X^>3
+S1
+R9
+w1696693954
+8PC.sv
+FPC.sv
+!i122 148
+L0 3 21
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R5
+n@p@c
+vProcessor
+R7
+R8
+!i10b 1
+!s100 CD=>c=H]5_HBYY07X`0?13
+I4?VhDE7hcXokVPf1?nhP22
+S1
+R9
+w1701937729
+8Processor.sv
+FProcessor.sv
+!i122 148
+L0 1 216
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R5
+n@processor
+vreg_file
+R7
+R8
+!i10b 1
+!s100 FlB=mK=H5<VeFj^f=:QUe1
+Ic3YgKYm5gXCKJfzOeGZFa3
+S1
+R9
+w1696787536
+8reg_file.sv
+Freg_file.sv
+!i122 148
+L0 1 30
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R5
+vtb_processor
+R7
+R8
+!i10b 1
+!s100 9d1X<BD[B1jDdP2oG3LFD1
+IX7D[8P?I:b2k<MHea;Q5@0
+S1
+R9
+w1701937775
+8tb_processor.sv
+Ftb_processor.sv
+!i122 148
+L0 1 63
+R10
+R11
+r1
+!s85 0
+31
+R12
+R15
+R13
+!i113 0
+R14
+R5

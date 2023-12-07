@@ -1,6 +1,7 @@
 module Processor (
     input logic clk,
-    input logic rst
+    input logic rst,
+    input logic interupt
 );
     //control signals
     logic            rf_en;
@@ -30,6 +31,7 @@ module Processor (
     logic [31:0] imm;
     logic [31:0] opr_res;
 
+   //pc control signal
     logic [31:0] mux_out_pc;
     logic [31:0] mux_out_opr_a;
     logic [31:0] mux_out_opr_b;
@@ -39,8 +41,33 @@ module Processor (
     logic        wr_en;
     logic [ 2:0] mem_type;
 
+    //csr
+    logic        tm_interupt;
+    logic        csr_rd;
+    logic        csr_wr;
+    logic [31:0] csr_rdata;
+    logic [31:0] epc;
+    logic        is_mret;
+    logic        epc_taken;
+    logic        excep;
+
+
+
+
+
+
     // pc selection mux
-    assign mux_out_pc = sel_pc ? opr_res : (pc_out + 32'd4);
+    always_comb 
+    begin 
+    if (epc_taken)
+        begin
+            mux_out_pc= epc;
+        end
+        else
+        begin
+            mux_out_pc = sel_pc ? opr_res : (pc_out + 32'd4);
+        end
+    end
 
 
 
@@ -99,7 +126,10 @@ module Processor (
         .br_taken  ( br_taken       ),
         .rd_en     ( rd_en          ),
         .wr_en     ( wr_en          ),
-        .mem_type  ( mem_type       )
+        .mem_type  ( mem_type       ),
+        .csr_rd    ( csr_rd         ),
+        .csr_wr    ( csr_wr         ),
+        .is_mret   ( is_mret        )
     );
 
      alu alu_i
@@ -139,6 +169,30 @@ module Processor (
         .rdata     ( rdata          )
     );
 
+     // csr 
+    csr_reg csr_reg_i
+    (
+        .clk       ( clk             ),
+        .rst       ( rst             ),
+        .addr      ( opr_res         ),
+        .wdata     ( rdata1          ),
+        .pc        ( pc_out          ),
+        .csr_rd    ( csr_rd          ),
+        .csr_wr    ( csr_wr          ),
+        .inst      ( inst            ),
+        .rdata     ( csr_rdata       )
+    );
+
+    interupt interupt_i
+    (
+        .is_mret    ( is_mret        ),    
+        .tm_interupt( interupt       ),        
+        .epc        ( epc            ),
+        .epc_taken  ( epc_taken      ),    
+        .excep      ( excep          )
+    );
+
+
     // operand a selection mux
     assign mux_out_opr_a = sel_opr_a ? pc_out : rdata1;
 
@@ -151,7 +205,11 @@ module Processor (
             2'b00: wdata = opr_res;
             2'b01: wdata = rdata;
             2'b10: wdata = pc_out + 32'd4;
-            2'b11: wdata = 32'd0;
+            2'b11: wdata = csr_rdata;
+            default:
+            begin
+                wdata = 32'b0;
+            end
         endcase
     end
 
